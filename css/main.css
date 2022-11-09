@@ -1,0 +1,130 @@
+:root {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+
+    --dark-cyan: hsl(158, 36%, 37%);
+    --very-dark-cyan: hsl(158, 37%, 23%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+}
+
+p, h3 {
+    margin: 0;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.container {
+    /* min-width: 345px; */
+    /* padding: 0 2em; */
+    margin-top: 3em;
+}
+
+.card {
+    min-width: 300px;
+    max-width: 428px;
+    margin: 0 auto;
+    border-radius: 1.2em;
+    color: var(--dark-grayish-blue);
+    background: var(--white);
+}
+
+.card-photo img {
+    display: block;
+    max-width: 100%;
+    border-top-left-radius: 1.2em;
+    border-top-right-radius: 1.2em;
+}
+
+.card-info {
+    padding: 1.5em 1.8em;
+}
+
+.card-info > .text-info {
+    display: flex;
+    flex-flow: column;
+    gap: 1.6em;
+}
+
+.card-info > .text-info > .previous {
+    font-size: 1.1em;
+    letter-spacing: .2em;
+}
+
+.card-info > .text-info > .title {
+    font-size: 1.7em;
+    color: var(--very-dark-blue);
+}
+
+.card-info > .text-info > .des {
+    line-height: 1.8em;
+}
+
+.card-info > .text-info > .price {
+    display: flex;
+    align-items: center;
+}
+
+.card-info > .text-info > .price > span {
+    text-decoration: line-through;
+}
+
+.card-info > .text-info > .price > .current-price {
+    margin-right: .4em;
+    font-size: 2.2em;
+    font-weight: 700;
+    color: var(--dark-cyan);
+    text-decoration: none;
+}
+
+.card-info > .add-to-cart {
+    margin-top: 1.6em;
+}
+
+.card-info > .add-to-cart > a {
+    display: block;
+    height: 3em;
+    border-radius: .5em;
+    font-size: 1.1em;
+    text-align: center;
+    line-height: 3em;
+    color: var(--white);
+    text-decoration: none;
+    background: var(--dark-cyan);
+}
+
+.card-info > .add-to-cart > a:hover {
+    background: var(--very-dark-cyan);
+}
+
+@media screen and (min-width: 620px) {
+    .card {
+        display: flex;
+        min-width: 600px;
+        max-width: 720px;
+        overflow: hidden;
+    }
+
+    .card-photo {
+        width: 50%;
+    }
+
+    .card-photo img {
+        border-top-right-radius: 0;
+    }
+
+    .card-info {
+        align-self: center;
+        width: 50%;
+        box-sizing: border-box;
+    }
+}
