@@ -11,6 +11,9 @@
 }
 
 body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
     margin: 0;
     background: var(--cream);
 }
@@ -90,20 +93,25 @@ p, h3 {
     margin-top: 1.6em;
 }
 
-.card-info > .add-to-cart > a {
+.card-info > .add-to-cart > button {
     display: block;
+    width: 100%;
     height: 3em;
+    border: none;
     border-radius: .5em;
     font-size: 1.1em;
     text-align: center;
+    text-indent: 2.5em;
     line-height: 3em;
     color: var(--white);
     text-decoration: none;
-    background: var(--dark-cyan);
+    cursor: pointer;
+    background: url('../imgs/icon-cart.svg') no-repeat 38% center;
+    background-color: var(--dark-cyan);
 }
 
-.card-info > .add-to-cart > a:hover {
-    background: var(--very-dark-cyan);
+.card-info > .add-to-cart > button:hover {
+    background-color: var(--very-dark-cyan);
 }
 
 @media screen and (min-width: 620px) {
